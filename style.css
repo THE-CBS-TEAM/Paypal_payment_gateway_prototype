@@ -30,6 +30,16 @@
     color: white;
     background-color: green;
   }
+  .Message{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 10px;
+    color: white;
+    background-color: skyblue;
+    width: 80%;
+  }
   button{
     padding: 20px;
     border: none;
@@ -45,8 +55,7 @@
     display: flex;
     justify-content: center;
     width: auto;
-    padding: 2%;
-    background-color: bisque;
+   
   }
  
  

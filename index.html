@@ -30,7 +30,7 @@
         <div id="paypal-button-container"></div>
       </div>
     </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=AbkvOwHxcJgX77d0Ybq3bT7GrYZ1NoVR0cn1U3j0WTgM6AqvZZMBIJg_k0YGl0ehMSRg8JUM6UZuKjEg&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
   <script>
     function initPayPalButton() {
       paypal.Buttons({
@@ -50,15 +50,13 @@
             // Full available details
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
             // Show a success message within this page, e.g.
-            const element = document.getElementById('paypal-button-container');
-            element.innerHTML = '';
-            element.innerHTML = '<h3>You have Successfully Register !</h3>';
-            // Or go to another URL:  actions.redirect('thank_you.html');
+           URL: actions.redirect('http://127.0.0.1:5501/Onsucess.html');
           });
         },
-        onError: function(err) {
-          console.log(err);
+        onCancel: function(err){
+          alert('Transaction cancelled for some reasons');
         }
+        
       }).render('#paypal-button-container');
     }
     initPayPalButton();
